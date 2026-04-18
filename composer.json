@@ -1,0 +1,1 @@
+{"name":"contensio/plugin-read-progress","description":"Read progress bar plugin for Contensio.","type":"contensio-plugin","license":"MIT","require":{"php":"^8.2","contensio/core":"^2.0"},"autoload":{"psr-4":{"Contensio\\Plugins\\ReadProgress\\":"src/"}},"extra":{"contensio":{"providers":["Contensio\\Plugins\\ReadProgress\\ReadProgressServiceProvider"]}}}
