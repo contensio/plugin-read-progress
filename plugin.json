@@ -1,1 +1,18 @@
-{"name":"Read Progress Bar","slug":"read-progress","version":"1.0.0","description":"Thin reading progress bar at the top of post pages that fills as you scroll.","author":"Contensio","author_url":"https://contensio.com","requires_contensio":"2.0.0","provider":"Contensio\\Plugins\\ReadProgress\\ReadProgressServiceProvider"}
+{
+    "name": "contensio/plugin-read-progress",
+    "label": "Read Progress Bar",
+    "description": "Thin reading progress bar at the top of post pages that fills as you scroll.",
+    "author": "Contensio",
+    "author_url": "https://contensio.com",
+    "version": "1.0.0",
+    "provider": "Contensio\\Plugins\\ReadProgress\\ReadProgressServiceProvider",
+    "autoload": {
+        "psr-4": {
+            "Contensio\\Plugins\\ReadProgress\\": "src/"
+        }
+    },
+    "requires": {
+        "cms": "^0.1"
+    },
+    "removable": true
+}
