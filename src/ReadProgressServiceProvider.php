@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Read Progress Bar — Contensio plugin.
+ * Read Progress Bar - Contensio plugin.
  * https://contensio.com
  *
  * @copyright   Copyright (c) 2026 Iosif Gabriel Chimilevschi
@@ -15,15 +15,17 @@ use Illuminate\Support\ServiceProvider;
 
 class ReadProgressServiceProvider extends ServiceProvider
 {
+    protected string $ns = 'contensio-read-progress';
+
     public function boot(): void
     {
-        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'read-progress');
+        $this->loadViewsFrom(__DIR__ . '/../resources/views', $this->ns);
 
         // Inject the progress bar element + JS into <head> on every page.
-        // The JS self-limits to pages that contain .contensio-post-body —
+        // The JS self-limits to pages that contain .contensio-post-body -
         // it exits immediately on pages where that class is absent.
         Hook::add('contensio/frontend/head', function (): string {
-            return view('read-progress::partials.bar')->render();
+            return view($this->ns . '::partials.bar')->render();
         });
     }
 }

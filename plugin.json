@@ -4,7 +4,7 @@
     "description": "Thin reading progress bar at the top of post pages that fills as you scroll.",
     "author": "Contensio",
     "author_url": "https://contensio.com",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "provider": "Contensio\\Plugins\\ReadProgress\\ReadProgressServiceProvider",
     "autoload": {
         "psr-4": {
